@@ -1,0 +1,427 @@
+/* Imported fonts here */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* h1{ */
+    /* font-family: "Bona Nova SC", serif; */
+    /* font-family: "Forum", serif; */
+/* } */
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#intro{
+    background-color: #F0F4F5;
+    /* background-color: #cce6ff; */
+    padding: 0;
+    margin: 0;
+    padding-top: 2rem; /* adds space between the top and the horiz line */
+    height: 100vh;
+}
+
+#intro-line{
+    border: none; /* Removes default border */
+    height: 1.5px; /* Sets the thickness of the line */
+    background-color: #4683EC;; /* Sets the color of the line */
+    width: 90%;
+}
+
+#logo-name{
+    font-family: "Space Grotesk", serif;
+    font-weight: 400;
+    margin-left: 4rem;
+    /* color: #B7245C; */
+    color: #4683EC;;
+    margin-bottom: 0px;
+}
+
+/* Navigation Links */
+
+/* Since the navigation links are a class we use the . */
+#logo-and-nav {
+    display: flex;
+    align-items: center; /* Align items on the same vertical axis */
+    justify-content: space-between; /* Add space between the logo and links */
+    margin-bottom: 0px; /* Space below the logo and navbar */
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", serif;
+    margin-right: 4rem;
+}
+
+.nav-links li {
+    margin-left: 20px; /* Add spacing between links */
+    
+}
+
+/* Base styles for navigation links */
+.nav-links a {
+    position: relative; /* Required for positioning the ::after element */
+    text-decoration: none;
+    font-size: 16px;
+    color: #4683EC;;
+    font-family: "Space Grotesk", serif;
+}
+
+/* Underline animation */
+.nav-links a::after {
+    content: ""; /* Empty content for the underline */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust distance from the text */
+    width: 100%;
+    height: 1px; /* Thickness of the underline */
+    background-color: #4683EC;; /* Color of the underline */
+    transform: scaleX(0); /* Start with no underline */
+    transform-origin: left; /* Start animation from the left */
+    transition: transform 0.4s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Expand underline */
+}
+
+/* Add margin to the left and right of each link */
+.nav-links li:nth-child(1) {
+    margin-right: 4px; /* Space after 'About' */
+}
+
+.nav-links li:nth-child(2) {
+    margin-right: 3px; /* Space after 'Resume' */
+    margin-left: 5px;
+}
+
+.nav-links li:nth-child(3) {
+    margin-left: 5px; 
+} 
+
+/* Add a slash separator after each link except the last one */
+.nav-links li:not(:last-child)::after {
+    content: "/"; /* Adds the slash separator */
+    margin-left: 5px; /* Adds space before the slash */
+    color: #4683EC;; /* Adjust color of the slash */
+}
+
+/* Hi, my name is */
+#name-intro{
+    margin-right: 2rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#name {
+    display: inline-block;
+    animation: moveUp 1.5s ease-in-out forwards;
+    opacity: 0; /* Start invisible */
+}
+
+#name{
+    /* color: #276FBF;  */
+    /* color: #c0376e; */
+    /* color: #B7245C; */
+    color: #4683EC;
+    font-family: "Young Serif", serif;
+    text-align: center;
+    margin-bottom: 0rem;
+    margin-top: 5rem;       /* adds space between the name and horiz line */
+    display: inline-block;
+    margin-left: 10rem;
+    margin-bottom: 12.5rem;    /* Adds space below the name section */
+}
+
+#firstName{
+    margin-right: 12rem;
+    margin-bottom: -30px;
+}
+
+#lastName{
+    margin-left: 15rem;
+}
+
+#firstName, #lastName {
+    margin-bottom: -15px; /* Removes any default margin */
+    margin-top: -40px;
+    padding: 0; /* Removes any default padding */
+    font-size: 100px;
+    letter-spacing: 3px;
+}
+
+/* Flexbox Container */
+#about-container, #education-container, #experience-container {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-between; /* Ensures space between the two columns */
+    align-items: flex-start; /* Aligns items at the top */
+    width: 80%; /* Sets the width of the container */
+    margin: 0 auto; /* Centers the container */
+    margin-top: 4rem; /* Adjusts the space above the container */
+}
+
+/* Left Column */
+#about-title, #education-title, #experience-title{
+    width: 30%; /* Sets the width of the left column */
+    font-family: "Space Grotesk"; /* Optional font */
+    font-size: 24px; /* Adjusts font size */
+    text-align: justify; /* Aligns text to the left */
+    margin: 0; /* Removes any default margin */
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+/* Right Column */
+#brief-intro, #education-info, #experience-info {
+    width: 65%; /* Sets the width of the right column */
+    font-family: "Poppins", serif; /* Optional font */
+    font-size: 18px; /* Adjusts font size */
+    text-align: left; /* Aligns text to the left */
+    margin: 0; /* Removes any default margin */
+    padding-top: 0; /* Ensures no padding above */
+    font-weight: 300;
+} 
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-family: "Space Grotesk", serif;
+    color: #4683EC;;
+    background-color: #f9f9f9;
+  }
+
+
+/* ABOUT */
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 3.5rem auto;
+    font-family: "Space Grotesk", sans-serif;
+}
+  
+  .about-left {
+    flex: 1;
+    padding-right: 2rem;
+    font-size: 16px;
+  }
+  
+  .about-left p {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+  }
+  
+  .about-left strong {
+    letter-spacing: 0.1em;
+  }
+  
+  .about-right {
+    flex: 2;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .about-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+  }
+  
+  .social-icons a {
+    margin-right: 20px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #4683EC;
+  }
+  
+  .resume-download {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    text-decoration: none;
+    font-family: "Space Grotesk", sans-serif;
+    color: #333;
+    transition: background-color 0.3s ease;
+    letter-spacing: 0.1em;
+  }
+  
+  .resume-download:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  
+
+/*********************************************************************************/
+
+/* Timeline Section */
+#timeline 
+{
+    background-color: #F0F4F5;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.timeline-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 40px 0 20px 25px;
+    color: #333;
+    /* border-bottom: 2px solid #ccc; */
+    padding-bottom: 5px;
+    font-family: "Space Grotesk", serif;
+}
+  
+
+.section-title 
+{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #4683EC;;
+}
+
+/* Timeline Container (left line) */
+.timeline-container 
+{
+    position: relative;
+    /* max-width: 800px; */
+    margin: 0 45px;
+    padding: 0 0 0 30px;
+}
+
+.timeline-container::before 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background-color: #4683EC;;
+}
+
+/* Timeline Item */
+.timeline-item 
+{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.coursework-list {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+
+.timeline-item.show 
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dot centered on left line */
+.timeline-dot 
+{
+    position: absolute;
+    left: 20;
+    top: 27px;
+    transform: translateX(-285%);
+    width: 12px;
+    height: 12px;
+    background-color: #063dce;
+    border-radius: 50%;
+}
+
+.timeline-dot::after 
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 22px; /* Adjust this depending on spacing */
+    height: 3px;
+    background-color: #063dce;
+}
+
+
+/* Content */
+.timeline-content 
+{
+    background: white;
+    padding: 1rem 1.5rem;
+    width: 80%;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid #063dce; /* dashed blue line */
+    font-family: "Space Grotesk", serif;
+
+}
+
+.timeline-content:hover 
+{
+    transform: scale(1.02);
+}
+
+.timeline-content h3 
+{
+    margin: 0 0 0.5rem;
+    color: #222;
+    font-size: 1.2rem;
+}
+
+.timeline-content p 
+{
+    margin: 0;
+    color: #444;
+}
+
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
